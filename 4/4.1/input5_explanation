@@ -1,0 +1,98 @@
+1. LINE 1-27
+Requirements (case for boards of length 1)
+Boards of length 1
+ - consists of a single empty board
+ - must be black's turn
+
+Violation
+- the board is nonempty with one stone placed
+
+2. LINE 29-55
+Requirements (case for boards of length 1)
+Boards of length 1
+ - consists of a single empty board
+ - must be black's turn
+
+Violation
+- the board is nonempty with two stone placed
+
+3. LINE 57-83
+Requirements (case for boards of length 1)
+Boards of length 1
+ - consists of a single empty board
+ - must be black's turn
+
+Violation
+- it is not black's turn
+
+
+4. LINE 85-131
+Requirements (case for boards of length 2)
+Boards of length 2
+ - Least recent board must be empty
+ - must be white's turn
+ - Most recent board can be filled at most one spot with black stone
+ (empty if black passed)
+
+Violation
+- It is not white's turn
+
+5. LINE 133-179
+Requirements (case for boards of length 2)
+Boards of length 2
+ - Least recent board must be empty
+ - must be white's turn
+ - Most recent board can be filled at most one spot with black stone
+ (empty if black passed)
+
+Violation
+- Least recent board is not empty
+
+6. LINE 181-227
+Requirements (case for boards of length 2)
+Boards of length 2
+ - Least recent board must be empty
+ - must be white's turn
+ - Most recent board can be filled at most one spot with black stone
+ (empty if black passed)
+
+Violation
+- Most recent board is filled with one white stone
+(should be one or zero black stone)
+
+7. LINE 229-275
+Requirements (case for boards of length 2)
+Boards of length 2
+ - Least recent board must be empty
+ - must be white's turn
+ - Most recent board can be filled at most one spot with black stone
+ (empty if black passed)
+
+Violation
+- Most recent board is filled with two black stone
+(should be one or zero black stone)
+
+--------BELOW THIS LINE, ALL STATEMENTS ARE TRUE---------
+8. line 277-323
+requirements (case for boards of length 2)
+boards of length 2
+ - least recent board must be empty
+ - must be white's turn
+ - most recent board can be filled at most one spot with black stone
+ (empty if black passed)
+
+situation explained
+- black passed its turn. it's white's turn to place
+- no violation of requirements
+
+9. line 279-371
+requirements (case for boards of length 2)
+boards of length 2
+ - least recent board must be empty
+ - must be white's turn
+ - most recent board can be filled at most one spot with black stone
+ (empty if black passed)
+
+situation explained
+- black placed one stone on the empty board. It's white's turn to place
+- no violation of requirements

@@ -1,0 +1,52 @@
+For general inputs(boards of length 3)
+
+This input tests the following things
+1. Must be right player's turn
+2. Boards should not contain a board that contains stones with no liberty
+
+It doesn't test (general board behavior and its relations)
+(3. No violation of Ko rule)
+(4. The difference between consecutive board should be either
+In case of pass
+  - two board should be same
+In case of play
+  - can have only one addition of new stone of right player
+  - can have arbitrary number of removals but each removal of stone must be in
+  accordance with the Go rule
+  (You can't just arbitrary remove random stones)
+  - can't have replacement of stone on the same position
+  (say, 1-1 was black stone, you can't have 1-1 to be white on the next board)
+)
+
+It also doesn't test (general player behavior)
+5. A player cannot place a stone where stone already exists
+
+1. LINE 1-67
+TESTING violation for "Must be right player's turn"
+
+violation
+- Say Boards = [B1, B2, B3] in the order of most recent to least recent
+- From B2, B3, we infer it's black's turn to place going from B2 -> B1.
+But B1 has one more white stone instead of black stone. So violation occurs
+
+2. LINE 69-135
+
+TESTING violation for "Must be right player's turn"
+
+Violation
+- B3->B2 white stone placed. B2->B1 black stone placed.
+- Therefore, B1->Current must be white's turn, but in the example it's black's
+turn. VIOLATION of "Must be right player's turn"
+
+3. LINE 137
+
+TESTING violation for "Boards should not contain a board with no liberty stones"
+
+Violation
+- B3 and B2 contains stones with no liberty
+
+4. LINE 137
+
+TESTING violation for "Boards should not contain a board with no liberty stones"
+
+VALID INPUT SO RETURNS TRUE
